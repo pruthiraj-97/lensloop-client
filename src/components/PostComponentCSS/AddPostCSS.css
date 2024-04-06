@@ -1,0 +1,92 @@
+.add-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffecec;
+}
+
+.add-post-container h2 {
+  margin-top: 0;
+  color: #333; 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000; 
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+.circle-container {
+  position: relative;
+  width: 300px; /* Adjust this to your desired container width */
+  height: 300px; /* Adjust this to your desired container height */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Hide the overflow to keep the circle inside the container */
+}
+
+.orbit {
+  width: 300px; /* Adjust according to the orbit size */
+  height: 300px; /* Adjust according to the orbit size */
+  position: relative;
+  margin: 100px auto; /* Adjust margin to center the orbit */
+  border: 2px dashed #ccc; /* Just to visualize the orbit path */
+  border-radius: 50%;
+  animation: orbit 5s linear infinite;
+}
+
+.planet {
+  width: 20px; /* Adjust size of the planet */
+  height: 20px; /* Adjust size of the planet */
+  background-color: red; /* Adjust color */
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 10px); /* Adjust to center the planet initially */
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+
+
+
+  
