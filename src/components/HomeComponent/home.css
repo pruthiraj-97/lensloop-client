@@ -1,4 +1,13 @@
 .All-story-div{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
+.search-icon {
+    cursor: pointer;
+    color: #007bff; /* Change the color as needed */
+    font-size: 24px; /* Change the size as needed */
+    margin-left: 10px; /* Adjust margin as needed */
+    margin-left: 7px;
+    margin-top: 10px;
+  }

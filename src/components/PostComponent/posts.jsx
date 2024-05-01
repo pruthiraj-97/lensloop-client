@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import AllPost from "./AllPost";
+import '../PostComponentCSS/posts.css'
 import socket from "../socket/socket";
 import { useNavigate } from "react-router-dom";
 function Post(){
@@ -25,7 +26,7 @@ function Post(){
       })()
     },[])
     return (
-       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+       <div className="post-main-container">
        {
          posts.length>0&&posts.map((post,index)=>{
             return <AllPost key={index} post={post}/>

@@ -6,11 +6,12 @@ import Post from "../PostComponent/posts";
 import MyStory from "../StoryComponent/mystory";
 import MyProfile from "../ProfileComponent/myprofile";
 import { BsBellFill } from 'react-icons/bs';
+import { BsSearch } from "react-icons/bs";
 import socket from '../socket/socket';
 function Home(){
   const navigate=useNavigate()
   const [user,setUser]=useState(JSON.parse(localStorage.getItem('user')))
-  const [hasNotification,setHasNotification]=useState(user.followRequests.length+user.notification.length)
+  const [hasNotification,setHasNotification]=useState()
   useEffect(()=>{
     (async ()=>{
       const response=await fetch("http://localhost:4000/api/auth/profile",{
@@ -45,7 +46,7 @@ function Home(){
           <MyStory/>
           <StoryCompo/>
           <div style={{ position: 'relative', display: 'inline-block' }}>
-       <BsBellFill style={{ color: 'red', cursor: 'pointer', fontSize: '24px', marginTop: '40px' }} 
+       <BsBellFill style={{ color: 'red', cursor: 'pointer', fontSize: '24px', marginTop: '20px',marginLeft: '5px' }} 
                onClick={() => navigate('/myprofile/notification')}
        />
     {hasNotification > 0 && (
@@ -64,8 +65,11 @@ function Home(){
       {hasNotification}
     </span>
   )}
+  <BsSearch
+    onClick={() => navigate('/searchuser')}
+    className="search-icon"
+  />
 </div>
-
         <MyProfile/>
         </div>
         <Post/>

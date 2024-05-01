@@ -91,24 +91,24 @@ function AllPost({post}){
      <div className="post-actions">
      <div>
        <AiFillLike
-         style={{ color:Post.likes.includes(user._id)? 'red':'black', cursor: 'pointer' }}
+         style={{ color:Post.likes.includes(user._id)? 'red':'white', cursor: 'pointer' }}
          onClick={HandleLike}
        />
-       <span>{Post.likes.length} likes</span> 
+       <span className="like-span">{Post.likes.length} likes</span> 
      </div>
      <div>
        <AiFillDislike
-         style={{ color:Post.dislikes.includes(user._id) ? 'red' : 'black', cursor: 'pointer' }}
+         style={{ color:Post.dislikes.includes(user._id) ? 'red' : 'white', cursor: 'pointer' }}
          onClick={HandleDislike}
        />
-       <span>Dislikes</span>
+       <span className="like-span">Dislikes</span>
 
      </div>
      <div>
        <FaComment className="comment"
          onClick={()=>setShowComments(!showComments)}
        />
-       <span>{Post.comments.length} Comments</span>
+       <span className="like-span">{Post.comments.length} Comments</span>
      </div>
    </div>
    {showComments &&

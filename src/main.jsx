@@ -16,6 +16,7 @@ import Following from './components/Notification/followingComponent.jsx'
 import Followers from './components/Notification/FollowerComponent.jsx'
 import FollowingCompoUser from './components/Notification/FollowingCompoUser.jsx'
 import Chat from './components/ChatComponent/Chat.jsx'
+import SearchUser  from './components/SearchUser/searchuser.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
          <Route path='userfollowers/:id' element={<Followers/>}/>
          <Route path='followinguser/:id' element={<FollowingCompoUser/>}/>
          <Route path='userchat/:id' element={<Chat/>}/>
+         <Route path='searchuser' element={<SearchUser/>}/>
       </Route>
     </Routes>
   </BrowserRouter>

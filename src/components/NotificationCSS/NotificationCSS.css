@@ -1,18 +1,19 @@
 .notification-container {
-    border: 1px solid #ccc;
+    border: 1px solid #454545;
     border-radius: 8px;
     padding: 20px;
     width: 300px;
     font-family: Arial, sans-serif;
     margin-left: 35%;
     margin-top: 50px;
+    background-color: rgb(96, 92, 92);
   }
   
   .notification-container h2 {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
-    color: blue;
+    color: rgb(255, 255, 255);
   }
   
   .notification-list {
@@ -96,6 +97,10 @@
   
   .message {
     margin-top: 5px;
+  }
+  .no-notification{
+    text-align: center;
+    color: white;
   }
   
   

@@ -83,7 +83,7 @@ function Notification(){
         <div className="notification-container">
         <h2>Notifications</h2>
         {requests.length+postMessage.length === 0 ? (
-          <p>No Notification at the moment.</p>
+          <p className="no-notification">No Notification at the moment.</p>
         ) : (
           <ul className="notification-list">
             {requests.map((request, index) => (

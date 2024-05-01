@@ -8,7 +8,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgb(237, 234, 234);
+    background-color:rgb(68, 68, 68);
     max-height: 500px;
     margin-top: 10px;
   }
@@ -31,10 +31,10 @@
   .user-profile-image a{
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: white;
   }
   .user-profile-image a:hover{
-    color: blue;
+    color: red;
   }
   .post-image {
     width: 100%; 
@@ -104,10 +104,10 @@
     text-decoration: none;
     font-size: large;
     cursor: pointer;
-    color: black;
+    color: white;
   }
   .comment-user-profile-image a:hover{
-    color: blue;
+    color: red;
   }
   .comment-content {
     flex-grow: 1;
@@ -120,7 +120,7 @@
   .comment-user {
     font-weight: bold;
     margin-bottom: 5px;
-    color: blue;
+    color: red;
     cursor: pointer;
   }
   
@@ -140,5 +140,9 @@
   .add-comment-button{
     margin-bottom: 10px;
     margin-top: 10px;
+  }
+  .like-span{
+    color: white;
+    cursor: pointer;
   }
   

@@ -1,0 +1,5 @@
+.post-main-container {
+    display: flex;
+    flex-wrap: wrap; /* Adding flex-wrap */
+    background-color: #514646; /* Adding background color */
+  }
