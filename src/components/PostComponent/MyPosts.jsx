@@ -11,7 +11,7 @@ function MyPost(){
     useEffect(()=>{
       (async ()=>{
         setLoding(true)
-        const response=await fetch(`http://localhost:4000/api/posts/getmypost/${id.id}`,{
+        const response=await fetch(`https://lensloop-server-1.onrender.com/api/posts/getmypost/${id.id}`,{
             method:'GET',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),
@@ -26,7 +26,7 @@ function MyPost(){
     },[])
     async function deletePost(e){
         e.preventDefault()
-        const response=await fetch(`http://localhost:4000/api/posts/deletepost/${post._id}`,{
+        const response=await fetch(`https://lensloop-server-1.onrender.com/api/posts/deletepost/${post._id}`,{
             method:'DELETE',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),

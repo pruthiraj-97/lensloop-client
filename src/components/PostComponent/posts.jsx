@@ -9,7 +9,7 @@ function Post(){
     const navigate=useNavigate()
     useEffect(()=>{
       (async ()=>{
-        const response=await fetch("http://localhost:4000/api/posts/getposts",{
+        const response=await fetch("https://lensloop-server-1.onrender.com/api/posts/getposts",{
           method:'GET',
           headers:{
             'Content-Type':'application/json'

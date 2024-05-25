@@ -8,7 +8,7 @@ function SearchUser() {
   async function searchUser(e){
       e.preventDefault()
       setUserName(e.target.value)
-      const response=await fetch(`http://localhost:4000/api/auth/searchuser?username=${username}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/searchuser?username=${username}`,{
           method:'GET',
           headers:{
               'x-auth-token':localStorage.getItem('token')

@@ -40,7 +40,7 @@ function Story(){
 
     async function likeComment(e){
       e.preventDefault()
-      const response=await fetch(`http://localhost:4000/api/story/likestory/${stories[currentIndex]._id}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/story/likestory/${stories[currentIndex]._id}`,{
          method:'POST',
          headers:{
            'x-auth-token':localStorage.getItem('token'),
@@ -59,7 +59,7 @@ function Story(){
     }
     async function dislikeComment(e){
       e.preventDefault()
-      const response=await fetch(`http://localhost:4000/api/story/dislikestory/${stories[currentIndex]._id}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/story/dislikestory/${stories[currentIndex]._id}`,{
          method:'POST',
          headers:{
            'x-auth-token':localStorage.getItem('token'),
@@ -80,7 +80,7 @@ function Story(){
 
     async function handleAddComment(e){
       e.preventDefault()
-      const response=await fetch(`http://localhost:4000/api/story/addcomment/${stories[currentIndex]._id}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/story/addcomment/${stories[currentIndex]._id}`,{
           method:'POST',
           headers:{
             'x-auth-token':localStorage.getItem('token'),

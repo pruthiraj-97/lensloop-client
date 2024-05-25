@@ -9,7 +9,7 @@ function MyStory() {
    useEffect(()=>{
      (async ()=>{
       setLoading(true)
-       const response=await fetch("http://localhost:4000/api/story/getmystory",{
+       const response=await fetch("https://lensloop-server-1.onrender.com/api/story/getmystory",{
           method:'GET',
           headers:{
             'x-auth-token':localStorage.getItem('token'),

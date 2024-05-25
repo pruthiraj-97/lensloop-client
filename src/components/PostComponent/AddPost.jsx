@@ -16,7 +16,7 @@ function AddPost(){
             formData.append('post', file);
             formData.append('title', title);
             formData.append('description', description);
-            const response=await fetch("http://localhost:4000/api/posts/createpost",{
+            const response=await fetch("https://lensloop-server-1.onrender.com/api/posts/createpost",{
               method: 'POST',
               headers: {
                 'x-auth-token': localStorage.getItem('token')

@@ -18,7 +18,7 @@ function Chat(){
   useEffect(()=>{
     (async ()=>{
       setLoding(true)
-       const response=await fetch(`http://localhost:4000/api/auth/getuserprofile/${id}`,{
+       const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/getuserprofile/${id}`,{
           method:'GET',
           headers:{
             'x-auth-token':localStorage.getItem('token'),
@@ -34,7 +34,7 @@ function Chat(){
 
   useEffect(()=>{
     (async ()=>{
-       const response=await fetch(`http://localhost:4000/api/message/getmessage/${id}`,{
+       const response=await fetch(`https://lensloop-server-1.onrender.com/api/message/getmessage/${id}`,{
         method:'GET',
         headers:{
           'x-auth-token':localStorage.getItem('token')
@@ -55,7 +55,7 @@ function Chat(){
   async function HandleMessageSend(e){
     e.preventDefault()
     console.log(sendmessage)
-    const response=await fetch(`http://localhost:4000/api/message/addmessage/${id}`,{
+    const response=await fetch(`https://lensloop-server-1.onrender.com/api/message/addmessage/${id}`,{
         method:'POST',
         headers:{
           'x-auth-token':localStorage.getItem('token'),

@@ -9,7 +9,7 @@ function Userprofile(){
     const[user,setuser]=useState(JSON.parse(localStorage.getItem('user')))
     const [loding,setLoding]=useState(false)
     async function sendFollowRequest(e){
-        const response=await fetch(`http://localhost:4000/api/auth/sendfollowrequest/${id}`,{
+        const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/sendfollowrequest/${id}`,{
             method:'POST',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),
@@ -24,7 +24,7 @@ function Userprofile(){
     useEffect(()=>{
       (async ()=>{
         setLoding(true)
-        const response=await fetch(`http://localhost:4000/api/auth/getuserprofile/${id}`,{
+        const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/getuserprofile/${id}`,{
            method:'GET',
            headers:{
             'x-auth-token':localStorage.getItem('token'),

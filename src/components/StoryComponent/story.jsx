@@ -6,7 +6,7 @@ function StoryCompo(){
     const navigate=useNavigate()
     useEffect(()=>{
       (async ()=>{
-        const response=await fetch("http://localhost:4000/api/story/getstory",{
+        const response=await fetch("https://lensloop-server-1.onrender.com/api/story/getstory",{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

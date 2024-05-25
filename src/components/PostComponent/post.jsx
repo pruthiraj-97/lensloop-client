@@ -8,7 +8,7 @@ function PostCompo(){
     const [user,setUser]=useState(JSON.parse(localStorage.getItem('user')))
     useEffect(()=>{
        (async ()=>{
-        const response=await fetch("http://localhost:4000/api/posts/getmyposts",{
+        const response=await fetch("https://lensloop-server-1.onrender.com/api/posts/getmyposts",{
             method:'GET',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),

@@ -8,7 +8,7 @@ function FollowingCompoUser(){
     const [following,setFollowing]=useState([])
     useEffect(()=>{
         (async ()=>{
-          const response=await fetch(`http://localhost:4000/api/auth/getuserprofile/${id}`,{
+          const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/getuserprofile/${id}`,{
             method:'GET',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),
@@ -23,7 +23,7 @@ function FollowingCompoUser(){
     function handleFollow(sendId){
       return async (e)=>{
          e.preventDefault()
-         const response=await fetch(`http://localhost:4000/api/auth/sendfollowrequest/${sendId}`,{
+         const response=await fetch(`https://lensloop-server-1.onrender.com/api/auth/sendfollowrequest/${sendId}`,{
             method:'POST',
             headers:{
                 'x-auth-token':localStorage.getItem('token'),

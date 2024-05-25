@@ -12,7 +12,7 @@ function SignUp(){
     async function signupUser(e){
         e.preventDefault()
         setLoding(true)
-        const response=await fetch("http://localhost:4000/api/auth/signup",{
+        const response=await fetch("https://lensloop-server-1.onrender.com/api/auth/signup",{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

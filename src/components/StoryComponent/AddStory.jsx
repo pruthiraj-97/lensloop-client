@@ -12,7 +12,7 @@ function AddStory(){
         const formData=new FormData()
         formData.append('story',story)
         formData.append('title',title)
-        const response=await fetch("http://localhost:4000/api/story/addstory",{
+        const response=await fetch("https://lensloop-server-1.onrender.com/api/story/addstory",{
             method:'POST',
             headers:{
                 'x-auth-token':localStorage.getItem('token')

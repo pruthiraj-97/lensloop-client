@@ -12,7 +12,7 @@ function AllPost({post}){
     const [newComment,setNewComment]=useState("")
     async function HandleLike(e){
        e.preventDefault()
-       const response=await fetch(`http://localhost:4000/api/posts/likepost/${post._id}`,{
+       const response=await fetch(`https://lensloop-server-1.onrender.com/api/posts/likepost/${post._id}`,{
          method:'POST',
          headers:{
            'x-auth-token':localStorage.getItem('token'),
@@ -24,7 +24,7 @@ function AllPost({post}){
     }  
     async function HandleDislike(e){
        e.preventDefault()
-       const response=await fetch(`http://localhost:4000/api/posts/dislikepost/${post._id}`,{
+       const response=await fetch(`https://lensloop-server-1.onrender.com/api/posts/dislikepost/${post._id}`,{
         method:'POST',
         headers:{
           'x-auth-token':localStorage.getItem('token'),
@@ -40,7 +40,7 @@ function AllPost({post}){
       if(!newComment){
         return
       }
-      const response=await fetch(`http://localhost:4000/api/comments/addcomment/${post._id}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/comments/addcomment/${post._id}`,{
         method:'POST',
         headers:{
           'x-auth-token':localStorage.getItem('token'),
@@ -65,7 +65,7 @@ function AllPost({post}){
     }
 
     async function handleDeleteComment(commentId){
-      const response=await fetch(`http://localhost:4000/api/comments/deletecomment/${commentId}`,{
+      const response=await fetch(`https://lensloop-server-1.onrender.com/api/comments/deletecomment/${commentId}`,{
          method:'DELETE',
          headers:{
            'x-auth-token':localStorage.getItem('token'),
